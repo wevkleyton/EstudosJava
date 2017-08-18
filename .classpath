@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/UtilitariosJAP/src/lib/jsch/jsch-0.1.52.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/UtilitariosJAP/src/lib/itext/itextpdf-5.5.8.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/UtilitariosJAP/src/lib/itext/itext-xtra-5.5.8-sources.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/UtilitariosJAP/src/lib/jasperReport/jasperreports-0.5.0.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/itextpdf-5.5.10.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/jgenesis.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/postgresql-9.4.1209.jre6.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/commons-collections-2.1.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/mail-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/log4j-core-2.7.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/backendless.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/iReport.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="/home/wev/git/Projetos/libs/jasperreports-5.0.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

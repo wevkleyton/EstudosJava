@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jgenesis">
+    <CLASSES>
+      <root url="jar:///projetos/libProd/jgenesis/jgenesis.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar:///projetos/libProd/jgenesis/jgenesis.jar!/" />
+    </SOURCES>
+  </library>
+</component>
