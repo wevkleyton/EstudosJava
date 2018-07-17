@@ -1,34 +1,61 @@
 package JavaFX.AplicacoesComQualidade.TeladeLogin;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import sun.awt.X11.XTrayIconPeer;
 
 public class LoginApp extends Application {
 
+	private AnchorPane pane;
+	private TextField txLogin;
+	private PasswordField txPassword;
+	private Button btEntrar, btSair;
+	private static Stage stage;
+
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage stage) throws Exception {
 		// TODO Auto-generated method stub
-		AnchorPane pane = new AnchorPane();
-		pane.setPrefSize(400, 300);
-		TextField txLogin = new TextField();
-		txLogin.setPromptText("Digite seu Login");
-		PasswordField txPassword = new PasswordField();
-		txPassword.setPromptText("Digite aqui sua Senha");
-		Button btEntrar = new Button("Entrar");
-		Button btSair = new Button("Sair");
-		pane.getChildren().addAll(txLogin, txPassword, btEntrar, btSair);
+		initComponents();
+		initListeners();
 		Scene scene = new Scene(pane);
-		primaryStage.setTitle("Tela de login");
-		primaryStage.setScene(scene);
-		primaryStage.show();
+		stage.setScene(scene);
+		stage.setResizable(false);
+		stage.setTitle("Tela de login");
+		stage.show();
+		initLayout();
+		LoginApp.stage = stage;
+
 		
 
+	}
+
+	public static Stage getStage() {
+		return stage;
+	}
+
+	public void initComponents() {
+		pane = new AnchorPane();
+		pane.setPrefSize(400, 300);
+		pane.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, blue 0%, silver 100%);");
+		txLogin = new TextField();
+		txLogin.setPromptText("Digite seu Login");
+		txPassword = new PasswordField();
+		txPassword.setPromptText("Digite aqui sua Senha");
+		btEntrar = new Button("Entrar");
+		btSair = new Button("Sair");
+		pane.getChildren().addAll(txLogin, txPassword, btEntrar, btSair);
+
+	}
+
+	public void initLayout() {
 		txLogin.setLayoutX((pane.getWidth() - txLogin.getWidth()) / 2);
 		txLogin.setLayoutY(50);
 		txPassword.setLayoutX((pane.getWidth() - txPassword.getWidth()) / 2);
@@ -38,7 +65,41 @@ public class LoginApp extends Application {
 		btSair.setLayoutX((pane.getWidth() - btSair.getWidth()) / 2);
 		btSair.setLayoutY(200);
 
-		pane.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, blue 0%, silver 100%);");
+	}
+
+	private void initListeners() {
+		btSair.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				// TODO Auto-generated method stub
+				fechaAplicacao();
+			}
+		});
+		btEntrar.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				logar();
+			}
+		});
+	}
+
+	public void fechaAplicacao() {
+		System.exit(0);
+	}
+
+	public void logar() {
+		if (txLogin.getText().equals("wev") && txPassword.getText().equals("123")) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Login!");
+			alert.setContentText("Login Efetuado com Sucesso!");
+			alert.show();
+		} else {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Erro ao logar");
+			alert.setContentText("Usuario ou Senha Incorretos!");
+		}
 	}
 
 	public static void main(String[] args) {
