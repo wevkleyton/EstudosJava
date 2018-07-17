@@ -99,6 +99,7 @@ public class LoginApp extends Application {
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Erro ao logar");
 			alert.setContentText("Usuario ou Senha Incorretos!");
+			alert.show();
 		}
 	}
 
