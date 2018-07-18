@@ -91,10 +91,12 @@ public class LoginApp extends Application {
 
 	public void logar() {
 		if (txLogin.getText().equals("wev") && txPassword.getText().equals("123")) {
-			Alert alert = new Alert(AlertType.INFORMATION);
-			alert.setTitle("Login!");
-			alert.setContentText("Login Efetuado com Sucesso!");
-			alert.show();
+			try {
+				new VitrineAPP().start(new Stage());
+				LoginApp.getStage().close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		} else {
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Erro ao logar");
