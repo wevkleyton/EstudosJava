@@ -2,7 +2,7 @@ package Exercicios.Exercicio03;
 
 import javax.swing.JOptionPane;
 /**
- * @author wev
+ * @author Ricardo
  * Ler um número qualquer e exibir a soma de todos os seus dígitos. Ex: 2504. 2 + 5 + 0 + 4 = 11
  */
 
