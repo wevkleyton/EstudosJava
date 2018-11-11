@@ -1,4 +1,4 @@
-package Exercicios.Lista03;
+package Exercicios.Exercicio03;
 
 /**
  * @author wev
